@@ -38,7 +38,7 @@
         background-size: cover; /* Ensures the image covers the entire screen */
         opacity: 0.05; /* Transparency for the see-through effect */
         animation: float 5s infinite alternate; /* Subtle floating effect */
-        }
+    }
 
     @keyframes float {
       0% {
@@ -57,9 +57,8 @@
 
     /* Logo styling */
     .logo {
-      max-width: 400px;
+      max-width: 350px;
       margin: 0 auto 5px;
-      animation: fadeIn 2s ease-in-out;
     }
 
     /* Text styling */
@@ -71,6 +70,7 @@
       text-align: center;
       background: url('bgFlag.png') no-repeat center center;
       background-size: cover;
+      background-clip: text;
       -webkit-background-clip: text; /* Clip the background to text */
       -webkit-text-fill-color: transparent; /* Make text transparent */
       color: transparent; /* Fallback for unsupported browsers */
@@ -94,27 +94,6 @@
       border-radius: 30px;
       cursor: pointer;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    @keyframes pulse {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.1);
-      }
-    }
-
-    /* Fade in animation */
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
   </style>
 </head>
