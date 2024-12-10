@@ -1,11 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oklahoma Heroes Outdoors</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <title>Oklahoma Heroes Outdoors</title>
+  <style>
+    /* Reset styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #3a3d40, #1c1f21);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: white;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* Animated background effect */
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: url('bgFlag.png') no-repeat center center;
+        background-size: cover; /* Ensures the image covers the entire screen */
+        opacity: 0.05; /* Transparency for the see-through effect */
+        animation: float 5s infinite alternate; /* Subtle floating effect */
+        }
+
+    @keyframes float {
+      0% {
+        transform: scale(1) translateY(0);
+      }
+      100% {
+        transform: scale(1.05) translateY(-20px);
+      }
+    }
+
+    /* Container styling */
+    .container {
+      max-width: 90%;
+      padding: 20px;
+    }
+
+    /* Logo styling */
+    .logo {
+      max-width: 400px;
+      margin: 0 auto 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    /* Text styling */
+    h1 {
+      font-size: 4rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+      background: url('bgFlag.png') no-repeat center center;
+      background-size: cover;
+      -webkit-background-clip: text; /* Clip the background to text */
+      -webkit-text-fill-color: transparent; /* Make text transparent */
+      color: transparent; /* Fallback for unsupported browsers */
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #b0b0b0;
+    }
+
+    /* Button styling */
+    .coming-soon {
+      margin-top: 20px;
+      padding: 10px 30px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #f80b0b, #870606);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
+
+    /* Fade in animation */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 <body>
-    
+  <div class="background"></div>
+  <div class="container">
+    <img src="okLogo.png" alt="Oklahoma Heroes Outdoors Logo" class="logo">
+    <h1>Oklahoma Heroes Outdoors</h1>
+    <p>Connecting veterans to the great outdoors through unforgettable adventures.</p>
+    <button class="coming-soon">Coming Soon</button>
+  </div>
 </body>
 </html>
